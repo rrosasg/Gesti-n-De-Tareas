@@ -17,4 +17,11 @@ public class Main {
             System.out.println("Estado de la tarea '" + lista.get(indice).title + "' actualizado a: " + nuevoEstado);
         }
     }
+
+    public static void eliminarTarea(ArrayList<Task> lista, int indice) {
+        if (indice >= 0 && indice < lista.size()) {
+            lista.remove(indice);
+            System.out.println("Tarea eliminada correctamente.");
+        }
+    }
 }
