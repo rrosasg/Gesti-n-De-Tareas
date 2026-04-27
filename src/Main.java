@@ -7,5 +7,14 @@ public class Main {
         System.out.println("Bienvenido al gestor de tareas");
 
         ArrayList<Task> listaDeTareas = new ArrayList<>();
+
+        cambiarEstadoTarea(listaDeTareas, 0, true);
+    }
+
+    public static void cambiarEstadoTarea(ArrayList<Task> lista, int indice, boolean nuevoEstado) {
+        if (indice >= 0 && indice < lista.size()) {
+            lista.get(indice).completed = nuevoEstado;
+            System.out.println("Estado de la tarea '" + lista.get(indice).title + "' actualizado a: " + nuevoEstado);
+        }
     }
 }
